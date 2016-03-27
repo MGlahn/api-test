@@ -7,8 +7,11 @@ var routes = function () {
     productRouter.route('/')
         .get(productController.get);
 
-    productRouter.route('/new-route')
-        .get(productController.newRoute);
+    productRouter.route('/all')
+        .get(productController.getAll);
+
+    productRouter.route('/info/:productname')
+        .get(productController.productInfo);
 
     return productRouter;
 };
